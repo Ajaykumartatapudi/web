@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Responsive Webpage</title>
+    <!-- <link rel="stylesheet" href="web.css" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <style>
+      
+/* Global */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: black; /* black font everywhere */
+  background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: -45px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex; /* Flexbox */
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: black;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #4CAF50;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex; /* Flexbox */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* About Section */
+.about {
+  padding: 100px 20px;
+  background:none;
+  display: grid; /* Grid Layout */
+  place-items: center;
+}
+
+.about-container {
+  display: grid; /* Grid */
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 30px;
+  max-width: 1000px;
+  text-align: center;
+}
+
+.about-container img {
+  max-width: 250px;
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+  margin: 0 auto;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.skills {
+  margin-top: 20px;
+  display: flex; /* Flexbox */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.skills span {
+  background: #4CAF50;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* Footer */
+#footer {
+  display: flex; /* Flexbox */
+  justify-content: center;
+  align-items: center;
+  background: #333;
+  color: white;
+  padding: 20px;
+  flex-direction: column;
+  text-align: center;
+}
+
+#footer pre {
+  margin: 5px 0;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+
+/* ---------- RESPONSIVENESS ---------- */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .about-container {
+    grid-template-columns: 1fr; /* Stack in 1 column */
+  }
+
+  .about-text h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .about-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+  }
+
+  .skills span {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .about-text h2 {
+    font-size: 1.4rem;
+  }
+
+  .about-text p {
+    font-size: 0.9rem;
+  }
+}
+html {
+  scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <h2 class="logo">T Ajay Kumar</h2>
+        <div class="nav-links">
+            <a href="#Home">Home</a>
+             <a href="#About">About</a> 
+            <a href="#contact">Contact</a>
+            <a href="https://in.linkedin.com/">LinkedIn</a>
+            
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>UI/UX Developer</h1>
+            <p class="intro-text">With a passion for creating thoughtful and visually stunning digital experiences.</p>
+        </div>
+    </section>
+     <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-container">
+            <img src="./images/ajay.jpeg" alt="Ajay Kumar">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>
+                    Hello! My name is <b>Ajay Kumar</b>, and I am from India.  
+                    I completed my graduation in 2024 in the stream of <b>Electronics and Communication Engineering</b>.  
+                    I am skilled in <b>UI Designing</b> and <b>Prototyping</b>, and I enjoy building user-friendly, creative digital experiences.
+                </p>
+                <div class="skills">
+                    <span>UI Designing</span>
+                    <span>Prototyping</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div id="footer">
+            <pre class="mo">Mobile number:9398800582</pre>
+            <pre class="em">email:ajaykumar298901@gmail.com</pre>
+             <pre class="lo">Location:India</pre>
+        </div>
+    </section>
+</body>
+</html>
